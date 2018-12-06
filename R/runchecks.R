@@ -10,7 +10,7 @@
 #' print(goodness$goodpractice_result)
 run_package_check <- function(pkg) {
   download_info <- download.packages(pkg, destdir=tempdir(), type="source")
-  untar(file.path(tempdir(), download_info[1,2]))
+  untar(download_info[1,2], exdir=tempdir())
   goodpractice_result <- goodpractice::goodpractice(file.path(tempdir(), download_info[1,1]))
   return(list(goodpractice_result=goodpractice_result, package_info=data.frame()))
 }
