@@ -8,5 +8,11 @@ Description: Task views contain useful compilations of R packages, but it can be
 License: GPL (>=2)
 Encoding: UTF-8
 LazyData: true
-Requires: goodpractice
+Requires: goodpractice,
+  crandb,
+  cranlogs,
+  ggplot2,
+  lubridate,
+  ctv,
+  parallel
 RoxygenNote: 6.1.1
