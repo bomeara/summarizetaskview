@@ -14,5 +14,7 @@ Requires: goodpractice,
   ggplot2,
   lubridate,
   ctv,
-  parallel
+  parallel,
+  packagemetrics
+Remotes: ropenscilabs/packagemetrics
 RoxygenNote: 6.1.1

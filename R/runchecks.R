@@ -3,7 +3,7 @@
 #' This runs a check of a given package by downloading it, running goodpractice, and checking other aspects of it.
 #'
 #' @param pkg The package name (a string)
-#' @return a list containing a goodpractice object (goodpractice_result), a data.frame of other information from crandb (package_info), and output from cran_donloads of daily downloads since 2013
+#' @return a list containing a goodpractice object (goodpractice_result), a data.frame from packagemetrics packagemetrics_result), a data.frame of other information from crandb (package_info), and output from cran_donloads of daily downloads since 2013
 #' @export
 #' @examples
 #' goodness <- run_package_check('hisse')
@@ -12,10 +12,11 @@ run_package_check <- function(pkg) {
   download_info <- download.packages(pkg, destdir=tempdir(), type="source")
   untar(download_info[1,2], exdir=tempdir())
   unlink(file.path(tempdir(), download_info[1,1], "inst", "doc"), recursive=TRUE) # to prevent interactive dialog when this gets overwritten
-  goodpractice_result <- goodpractice::goodpractice(file.path(tempdir(), download_info[1,1]))
+  goodpractice_result <- goodpractice::goodpractice(file.path(tempdir(), download_info[1,1]), checks=goodpractice::all_checks()[!grepl("rcmdcheck",goodpractice::all_checks())])
+  packagemetrics_result <- packagemetrics::package_list_metrics(pkg)
   crandb_info <- crandb::package(pkg, version="all")
   downloads <- cranlogs::cran_downloads(pkg, from="2013-01-01", to=Sys.Date()-1)
-  return(list(goodpractice_result=goodpractice_result, package_info=crandb_info, downloads=downloads))
+  return(list(goodpractice_result=goodpractice_result, packagemetrics_result=packagemetrics_result, package_info=crandb_info, downloads=downloads))
 }
 
 #' Plot downloads and package updates
@@ -42,7 +43,7 @@ plot_package_check <- function(pkgcheck) {
 #' @return vector of packages
 #' @export
 get_all_packages_in_view <- function(view) {
-  return((Filter(function(x) x$name == view, available.views())[[1]])$packagelist$name)
+  return((Filter(function(x) x$name == view, ctv::available.views())[[1]])$packagelist$name)
 }
 
 #' Check a vector of packages
@@ -83,6 +84,9 @@ summarize_goodness <- function(pkgcheck) {
     has_url = results_vector["description_url"],
     has_bug_reporting = results_vector["description_bugreports"],
     downloads_last_year = sum(tail(pkgcheck$downloads$count, 365)),
+    has_vignette_build = pkgcheck$packagemetrics_result$has_vignette_build,
+    greatest_fn_complexity = max(pkgcheck$goodpractice_result$cyclocomp$cyclocomp),
+    days_since_last_issue_closed = pkgcheck$packagemetrics_result$last_issue_closed*30, #since they use /30: https://github.com/ropenscilabs/packagemetrics/blob/00846df741fbcc672bfde2371b0877186283d5f9/R/scrape_github_url.R#L112
     stringsAsFactors=FALSE
   )
   rownames(goodness_result) <- NULL
