@@ -12,7 +12,7 @@ run_package_check <- function(pkg) {
   download_info <- download.packages(pkg, destdir=tempdir(), type="source")
   untar(download_info[1,2], exdir=tempdir())
   unlink(file.path(tempdir(), download_info[1,1], "inst", "doc"), recursive=TRUE) # to prevent interactive dialog when this gets overwritten
-  goodpractice_result <- goodpractice::goodpractice(file.path(tempdir(), download_info[1,1]), checks=goodpractice::all_checks()[!grepl("rcmdcheck",goodpractice::all_checks())])
+  goodpractice_result <- goodpractice::goodpractice(file.path(tempdir(), download_info[1,1]))
   packagemetrics_result <- packagemetrics::package_list_metrics(pkg)
   crandb_info <- crandb::package(pkg, version="all")
   downloads <- cranlogs::cran_downloads(pkg, from="2013-01-01", to=Sys.Date()-1)
