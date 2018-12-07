@@ -10,7 +10,7 @@ run_package_check(pkg)
 \item{pkg}{The package name (a string)}
 }
 \value{
-a list containing a goodpractice object (goodpractice_result), a data.frame of other information from crandb (package_info), and output from cran_donloads of daily downloads since 2013
+a list containing a goodpractice object (goodpractice_result), a data.frame from packagemetrics packagemetrics_result), a data.frame of other information from crandb (package_info), and output from cran_donloads of daily downloads since 2013
 }
 \description{
 This runs a check of a given package by downloading it, running goodpractice, and checking other aspects of it.

@@ -15,6 +15,7 @@ Requires: goodpractice,
   lubridate,
   ctv,
   parallel,
-  packagemetrics
+  packagemetrics,
+  devtools
 Remotes: ropenscilabs/packagemetrics
 RoxygenNote: 6.1.1

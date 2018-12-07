@@ -64,6 +64,23 @@ check_all_packages <- function(pkgs, ncores=1) {
   return(parallel::mclapply(pkgs, run_package_check, mc.cores=ncores))
 }
 
+#' Runs tests for all packages in a task view and stores inside this package
+#'
+#' @param view View name to get packages from
+#' @param ncores Number of cores to use
+#' @return nothing, though a data file has been saved
+#' @export
+cache_all_from_view <- function(view="Phylogenetics", ncores=parallel::detectCores()) {
+  all_packages <- check_all_packages(get_all_packages_in_view(view), ncores=ncores)
+  devtools::use_data(all_packages, overwrite=TRUE)
+}
+
+#' Quality information for phyogenetics packages
+#'
+#' A dataset of outputs of run_package_check for every package in the Phylogenetics task view
+#'
+#' @format A list containing lists of quality information
+"all_packages"
 
 #' Summarize goodness of a package
 #'
@@ -71,6 +88,8 @@ check_all_packages <- function(pkgs, ncores=1) {
 #' @param pkgcheck output from run_package_check
 #' @return A data.frame with information
 #' @export
+#' @examples
+#'  t(sapply(all_packages, summarize_goodness))
 summarize_goodness <- function(pkgcheck) {
   results_vector <- goodpractice::results(pkgcheck$goodpractice_result)$result
   names(results_vector) <- goodpractice::results(pkgcheck$goodpractice_result)$check
@@ -85,8 +104,9 @@ summarize_goodness <- function(pkgcheck) {
     has_bug_reporting = results_vector["description_bugreports"],
     downloads_last_year = sum(tail(pkgcheck$downloads$count, 365)),
     has_vignette_build = pkgcheck$packagemetrics_result$has_vignette_build,
-    greatest_fn_complexity = max(pkgcheck$goodpractice_result$cyclocomp$cyclocomp),
+    percent_maximum_ideal_complexity = ifelse(class(pkgcheck$goodpractice_result$cyclocomp)=="try-error", NA, max(10*pkgcheck$goodpractice_result$cyclocomp$cyclocomp)), #assumes 10 is ideal, so if 13, then that is 30% over, so 130% max ideal complexity
     days_since_last_issue_closed = pkgcheck$packagemetrics_result$last_issue_closed*30, #since they use /30: https://github.com/ropenscilabs/packagemetrics/blob/00846df741fbcc672bfde2371b0877186283d5f9/R/scrape_github_url.R#L112
+    days_since_last_commit = pkgcheck$packagemetrics_result$last_commit*30,
     stringsAsFactors=FALSE
   )
   rownames(goodness_result) <- NULL
