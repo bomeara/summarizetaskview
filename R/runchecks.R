@@ -26,12 +26,14 @@ run_package_check <- function(pkg) {
 
 #' Plot downloads and package updates
 #'
-#' This will plot downloads, a smoothed line of downloads through time, and vertical lines showing package updates on CRAN
+#' This will plot downloads, a smoothed line of downloads through time, and vertical lines showing package updates on CRAN. The download numbers can probably be spammed, but still seem to reflect overall trends. Note that values of zero are removed before plotting
 #'
 #' @param pkgcheck output from run_package_check
 #' @return A ggplot2 object
 #' @export
 plot_package_check <- function(pkgcheck) {
+  to.delete <- which(pkgcheck$downloads$count==0)
+  pkgcheck$downloads <- pkgcheck$downloads[-to.delete,]
   my_plot <- ggplot2::ggplot(pkgcheck$downloads, ggplot2::aes(x=date, y=count)) +
     ggplot2::ggtitle(pkgcheck$package_info$name) +
     ggplot2::geom_point(alpha=0.2) +
