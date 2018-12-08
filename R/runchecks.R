@@ -9,13 +9,18 @@
 #' goodness <- run_package_check('hisse')
 #' print(goodness$goodpractice_result)
 run_package_check <- function(pkg) {
-  download_info <- download.packages(pkg, destdir=tempdir(), type="source")
-  untar(download_info[1,2], exdir=tempdir())
-  unlink(file.path(tempdir(), download_info[1,1], "inst", "doc"), recursive=TRUE) # to prevent interactive dialog when this gets overwritten
-  goodpractice_result <- goodpractice::goodpractice(file.path(tempdir(), download_info[1,1]))
-  packagemetrics_result <- packagemetrics::package_list_metrics(pkg)
-  crandb_info <- crandb::package(pkg, version="all")
-  downloads <- cranlogs::cran_downloads(pkg, from="2013-01-01", to=Sys.Date()-1)
+  goodpractice_result <- NULL
+  packagemetrics_result <- NULL
+  crandb_info <- NULL
+  downloads <- NULL
+  try(download_info <- download.packages(pkg, destdir=tempdir(), type="source"))
+  try(untar(download_info[1,2], exdir=tempdir()))
+  try(unlink(file.path(tempdir(), download_info[1,1], "inst", "doc"), recursive=TRUE)) # to prevent interactive dialog when this gets overwritten
+  try(goodpractice_result <- goodpractice::goodpractice(file.path(tempdir(), download_info[1,1])))
+  try(packagemetrics_result <- packagemetrics::package_list_metrics(pkg))
+  try(crandb_info <- crandb::package(pkg, version="all"))
+  try(downloads <- cranlogs::cran_downloads(pkg, from="2013-01-01", to=Sys.Date()-1))
+  try(unlink(file.path(tempdir(), download_info[1,1])))
   return(list(goodpractice_result=goodpractice_result, packagemetrics_result=packagemetrics_result, package_info=crandb_info, downloads=downloads))
 }
 
