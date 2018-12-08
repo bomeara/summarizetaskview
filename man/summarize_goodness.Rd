@@ -15,3 +15,6 @@ A data.frame with information
 \description{
 Gives useful information about downloads, updates, best practices, and more
 }
+\examples{
+ t(sapply(all_packages, summarize_goodness))
+}

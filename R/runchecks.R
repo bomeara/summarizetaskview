@@ -77,7 +77,7 @@ check_all_packages <- function(pkgs, ncores=1) {
 #' @export
 cache_all_from_view <- function(view="Phylogenetics", ncores=parallel::detectCores()) {
   all_packages <- check_all_packages(get_all_packages_in_view(view), ncores=ncores)
-  devtools::use_data(all_packages, overwrite=TRUE)
+  usethis::use_data(all_packages, overwrite=TRUE)
 }
 
 #' Quality information for phyogenetics packages
