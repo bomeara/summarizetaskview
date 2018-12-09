@@ -29,15 +29,22 @@ run_package_check <- function(pkg) {
 #' This will plot downloads, a smoothed line of downloads through time, and vertical lines showing package updates on CRAN. The download numbers can probably be spammed, but still seem to reflect overall trends. Note that values of zero are removed before plotting
 #'
 #' @param pkgcheck output from run_package_check
+#' @param comparison package to compare downloads to
 #' @return A ggplot2 object
 #' @export
-plot_package_check <- function(pkgcheck) {
+plot_package_check <- function(pkgcheck, comparison=NULL) {
+  if(!is.null(comparison)) {
+    comparison_DL <- cranlogs::cran_downloads(pkg, from="2013-01-01", to=Sys.Date()-1)
+    pkgcheck$downloads$count <- pkgcheck$downloads$count/comparison_DL$count
+  }
   to.delete <- which(pkgcheck$downloads$count==0)
+  to.delete <- unique(c(to.delete, which(is.na(pkgcheck$downloads$count))))
+
   pkgcheck$downloads <- pkgcheck$downloads[-to.delete,]
   my_plot <- ggplot2::ggplot(pkgcheck$downloads, ggplot2::aes(x=date, y=count)) +
     ggplot2::ggtitle(pkgcheck$package_info$name) +
     ggplot2::geom_point(alpha=0.2) +
-    ggplot2::geom_smooth() + ggplot2::scale_y_continuous(trans='log10') + ggplot2::geom_vline(xintercept=lubridate::as_date(unlist(pkgcheck$package_info$timeline)), color="red") + ggplot2::xlim(min(lubridate::as_date(unlist(pkgcheck$package_info$timeline)), pkgcheck$downloads$date), Sys.Date())
+    ggplot2::geom_smooth() + ggplot2::scale_y_continuous(trans='log10') + ggplot2::ylab(ifelse(is.null(comparison), "count", paste0("count relative to ", comparison))) +  ggplot2::geom_vline(xintercept=lubridate::as_date(unlist(pkgcheck$package_info$timeline)), color="red") + ggplot2::xlim(min(lubridate::as_date(unlist(pkgcheck$package_info$timeline)), pkgcheck$downloads$date), Sys.Date())
     my_plot
     return(my_plot)
 }
