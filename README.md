@@ -122,596 +122,398 @@ parallel.
 | warbleR       | 2018-10-16   | 0.15                       | 3.38                         | 17                         | FALSE         | TRUE     | TRUE                | 5696                  | TRUE                 | NA                                  | 19                               | 1                         |
 | windex        | 2014-10-16   | 4.15                       | 4.15                         | 1                          | TRUE          | FALSE    | FALSE               | 2355                  | FALSE                | 200                                 | NA                               | NA                        |
 
-    #> 
-    #> ## adephylo
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-1.png" width="100%" />
 
-    #> 
-    #> ## adhoc
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-2.png" width="100%" />
 
-    #> 
-    #> ## adiv
     #> `geom_smooth()` using method = 'loess' and formula 'y ~ x'
 
 <img src="man/figures/README-figures-3.png" width="100%" />
 
-    #> 
-    #> ## ape
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-4.png" width="100%" />
 
-    #> 
-    #> ## apex
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-5.png" width="100%" />
 
-    #> 
-    #> ## aphid
     #> `geom_smooth()` using method = 'loess' and formula 'y ~ x'
 
 <img src="man/figures/README-figures-6.png" width="100%" />
 
-    #> 
-    #> ## apTreeshape
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-7.png" width="100%" />
 
-    #> 
-    #> ## BAMMtools
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-8.png" width="100%" />
 
-    #> 
-    #> ## bayou
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-9.png" width="100%" />
 
-    #> 
-    #> ## betapart
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-10.png" width="100%" />
 
-    #> 
-    #> ## BioGeoBEARS
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-11.png" width="100%" />
 
-    #> 
-    #> ## BoSSA
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-12.png" width="100%" />
 
-    #> 
-    #> ## brms
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-13.png" width="100%" />
 
-    #> 
-    #> ## brranching
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-14.png" width="100%" />
 
-    #> 
-    #> ## caper
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-15.png" width="100%" />
 
-    #> 
-    #> ## cati
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-16.png" width="100%" />
 
-    #> 
-    #> ## convevol
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-17.png" width="100%" />
 
-    #> 
-    #> ## corHMM
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-18.png" width="100%" />
 
-    #> 
-    #> ## DAMOCLES
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-19.png" width="100%" />
 
-    #> 
-    #> ## DDD
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-20.png" width="100%" />
 
-    #> 
-    #> ## dendextend
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-21.png" width="100%" />
 
-    #> 
-    #> ## dispRity
     #> `geom_smooth()` using method = 'loess' and formula 'y ~ x'
 
 <img src="man/figures/README-figures-22.png" width="100%" />
 
-    #> 
-    #> ## distory
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-23.png" width="100%" />
 
-    #> 
-    #> ## diversitree
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-24.png" width="100%" />
 
-    #> 
-    #> ## ecospat
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-25.png" width="100%" />
 
-    #> 
-    #> ## entropart
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-26.png" width="100%" />
 
-    #> 
-    #> ## enveomics.R
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-27.png" width="100%" />
 
-    #> 
-    #> ## evobiR
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-28.png" width="100%" />
 
-    #> 
-    #> ## expoTree
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-29.png" width="100%" />
 
-    #> 
-    #> ## geiger
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-30.png" width="100%" />
 
-    #> 
-    #> ## geomorph
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-31.png" width="100%" />
 
-    #> 
-    #> ## ggmuller
     #> `geom_smooth()` using method = 'loess' and formula 'y ~ x'
 
 <img src="man/figures/README-figures-32.png" width="100%" />
 
-    #> 
-    #> ## ggplot2
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-33.png" width="100%" />
 
-    #> 
-    #> ## GUniFrac
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-34.png" width="100%" />
 
-    #> 
-    #> ## hisse
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-35.png" width="100%" />
 
-    #> 
-    #> ## HMPTrees
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-36.png" width="100%" />
 
-    #> 
-    #> ## HyPhy
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-37.png" width="100%" />
 
-    #> 
-    #> ## idendr0
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-38.png" width="100%" />
 
-    #> 
-    #> ## ips
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-39.png" width="100%" />
 
-    #> 
-    #> ## iteRates
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-40.png" width="100%" />
 
-    #> 
-    #> ## jaatha
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-41.png" width="100%" />
 
-    #> 
-    #> ## kdetrees
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-42.png" width="100%" />
 
-    #> 
-    #> ## markophylo
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-43.png" width="100%" />
 
-    #> 
-    #> ## MCMCglmm
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-44.png" width="100%" />
 
-    #> 
-    #> ## metacoder
     #> `geom_smooth()` using method = 'loess' and formula 'y ~ x'
 
 <img src="man/figures/README-figures-45.png" width="100%" />
 
-    #> 
-    #> ## metafor
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-46.png" width="100%" />
 
-    #> 
-    #> ## MPSEM
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-47.png" width="100%" />
 
-    #> 
-    #> ## mvMORPH
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-48.png" width="100%" />
 
-    #> 
-    #> ## nLTT
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-49.png" width="100%" />
 
-    #> 
-    #> ## nodiv
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-50.png" width="100%" />
 
-    #> 
-    #> ## ouch
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-51.png" width="100%" />
 
-    #> 
-    #> ## outbreaker
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-52.png" width="100%" />
 
-    #> 
-    #> ## OutbreakTools
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-53.png" width="100%" />
 
-    #> 
-    #> ## OUwie
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-54.png" width="100%" />
 
-    #> 
-    #> ## paleotree
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-55.png" width="100%" />
 
-    #> 
-    #> ## paleoTS
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-56.png" width="100%" />
 
-    #> 
-    #> ## pastis
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-57.png" width="100%" />
 
-    #> 
-    #> ## PBD
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-58.png" width="100%" />
 
-    #> 
-    #> ## PCPS
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-59.png" width="100%" />
 
-    #> 
-    #> ## pegas
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-60.png" width="100%" />
 
-    #> 
-    #> ## phangorn
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-61.png" width="100%" />
 
-    #> 
-    #> ## phyclust
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-62.png" width="100%" />
 
-    #> 
-    #> ## phyext2
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-63.png" width="100%" />
 
-    #> 
-    #> ## phylobase
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-64.png" width="100%" />
 
-    #> 
-    #> ## phylocanvas
     #> `geom_smooth()` using method = 'loess' and formula 'y ~ x'
 
 <img src="man/figures/README-figures-65.png" width="100%" />
 
-    #> 
-    #> ## phyloclim
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-66.png" width="100%" />
 
-    #> 
-    #> ## PHYLOGR
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-67.png" width="100%" />
 
-    #> 
-    #> ## phylogram
     #> `geom_smooth()` using method = 'loess' and formula 'y ~ x'
 
 <img src="man/figures/README-figures-68.png" width="100%" />
 
-    #> 
-    #> ## phyloland
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-69.png" width="100%" />
 
-    #> 
-    #> ## phylolm
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-70.png" width="100%" />
 
-    #> 
-    #> ## phylotools
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-71.png" width="100%" />
 
-    #> 
-    #> ## phyloTop
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-72.png" width="100%" />
 
-    #> 
-    #> ## phyreg
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-73.png" width="100%" />
 
-    #> 
-    #> ## phytools
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-74.png" width="100%" />
 
-    #> 
-    #> ## picante
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-75.png" width="100%" />
 
-    #> 
-    #> ## pmc
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-76.png" width="100%" />
 
-    #> 
-    #> ## ratematrix
     #> `geom_smooth()` using method = 'loess' and formula 'y ~ x'
 
 <img src="man/figures/README-figures-77.png" width="100%" />
 
-    #> 
-    #> ## rdryad
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-78.png" width="100%" />
 
-    #> 
-    #> ## rmetasim
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-79.png" width="100%" />
 
-    #> 
-    #> ## rncl
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-80.png" width="100%" />
 
-    #> 
-    #> ## RNeXML
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-81.png" width="100%" />
 
-    #> 
-    #> ## rotl
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-82.png" width="100%" />
 
-    #> 
-    #> ## rphast
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-83.png" width="100%" />
 
-    #> 
-    #> ## Rphylip
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-84.png" width="100%" />
 
-    #> 
-    #> ## SigTree
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-85.png" width="100%" />
 
-    #> 
-    #> ## strap
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-86.png" width="100%" />
 
-    #> 
-    #> ## surface
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-87.png" width="100%" />
 
-    #> 
-    #> ## SYNCSA
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-88.png" width="100%" />
 
-    #> 
-    #> ## taxize
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-89.png" width="100%" />
 
-    #> 
-    #> ## TESS
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-90.png" width="100%" />
 
-    #> 
-    #> ## tidytree
     #> `geom_smooth()` using method = 'loess' and formula 'y ~ x'
 
 <img src="man/figures/README-figures-91.png" width="100%" />
 
-    #> 
-    #> ## treebase
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-92.png" width="100%" />
 
-    #> 
-    #> ## treedater
     #> `geom_smooth()` using method = 'loess' and formula 'y ~ x'
 
 <img src="man/figures/README-figures-93.png" width="100%" />
 
-    #> 
-    #> ## TreePar
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-94.png" width="100%" />
 
-    #> 
-    #> ## treeplyr
     #> `geom_smooth()` using method = 'loess' and formula 'y ~ x'
 
 <img src="man/figures/README-figures-95.png" width="100%" />
 
-    #> 
-    #> ## TreeSim
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-96.png" width="100%" />
 
-    #> 
-    #> ## vegan
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-97.png" width="100%" />
 
-    #> 
-    #> ## warbleR
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-98.png" width="100%" />
 
-    #> 
-    #> ## windex
     #> `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 <img src="man/figures/README-figures-99.png" width="100%" />
