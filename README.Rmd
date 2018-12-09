@@ -28,9 +28,9 @@ all_package_results <- t(sapply(all_packages, summarize_goodness))
 kable(all_package_results)
 ```
 
-```{r figures, echo=FALSE, warnings=FALSE, fig.height=3, fig.width=3}
+```{r figures, echo=FALSE, warnings=FALSE, fig.height=2, fig.width=3}
 for (package.index in seq_along(all_packages)) {
-  cat(paste0("\n## ", all_packages[package.index]), "\n")
-  print(suppressWarnings(plot_package_check(all_packages[[package.index]])))
+  cat(paste0("\n## ", (all_packages[[package.index]])$package_info$name), "\n")
+  print(suppressWarnings(plot_package_check(all_packages[[package.index]], comparison="ape")))
 }
 ```

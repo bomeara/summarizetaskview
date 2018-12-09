@@ -4,14 +4,16 @@
 \alias{plot_package_check}
 \title{Plot downloads and package updates}
 \usage{
-plot_package_check(pkgcheck)
+plot_package_check(pkgcheck, comparison = NULL)
 }
 \arguments{
 \item{pkgcheck}{output from run_package_check}
+
+\item{comparison}{package to compare downloads to}
 }
 \value{
 A ggplot2 object
 }
 \description{
-This will plot downloads, a smoothed line of downloads through time, and vertical lines showing package updates on CRAN
+This will plot downloads, a smoothed line of downloads through time, and vertical lines showing package updates on CRAN. The download numbers can probably be spammed, but still seem to reflect overall trends. Note that values of zero are removed before plotting
 }

@@ -34,8 +34,9 @@ run_package_check <- function(pkg) {
 #' @export
 plot_package_check <- function(pkgcheck, comparison=NULL) {
   if(!is.null(comparison)) {
-    comparison_DL <- cranlogs::cran_downloads(pkg, from="2013-01-01", to=Sys.Date()-1)
-    pkgcheck$downloads$count <- pkgcheck$downloads$count/comparison_DL$count
+    comparison_DL <- cranlogs::cran_downloads(comparison, from="2013-01-01", to=Sys.Date()-1)
+    comparison_DL$index <- sequence(nrow(comparison_DL))
+    pkgcheck$downloads$count <- pkgcheck$downloads$count/predict(stats::loess(count ~ index, comparison_DL), newdata=sequence(nrow(pkgcheck$downloads)))
   }
   to.delete <- which(pkgcheck$downloads$count==0)
   to.delete <- unique(c(to.delete, which(is.na(pkgcheck$downloads$count))))

@@ -16,6 +16,7 @@ Requires: goodpractice,
   ctv,
   parallel,
   packagemetrics,
-  usethis
+  usethis,
+  stats
 Remotes: ropenscilabs/packagemetrics
 RoxygenNote: 6.1.1
